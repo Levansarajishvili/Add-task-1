@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: rgb(1, 37, 1)">
+    <div
+      class="myForm"
+      style="
+        width: 100%;
+        height: 35rem;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+      "
+    >
+      <form
+        action="#"
+        method="get"
+        style="
+          width: 20rem;
+          height: auto;
+          background-color: rgb(184, 245, 94);
+          padding: 1rem;
+          text-align: center;
+        "
+      >
+        <h1 style="font-size: 18px; color: green">Task control page</h1>
+        <input
+          type="text"
+          style="width: 90%; padding: 1rem; margin-bottom: 0.5rem"
+          placeholder="Task name"
+          id="taskname"
+        />
+        <input
+          type="text"
+          style="width: 90%; padding: 1rem; margin-bottom: 0.5rem"
+          placeholder="Task description"
+          id="description"
+        />
+
+        <input
+          type="text"
+          style="width: 90%; padding: 1rem; margin-bottom: 0.5rem"
+          placeholder="Task assignee"
+          id="assignee"
+        />
+        <button
+          onclick="submitData()"
+          style="width: 90%; padding: 1rem; background-color: greenyellow"
+        >
+          ჩაწერა
+        </button>
+        <!-- <div id="displayers">მონაცემები</div> -->
+      </form>
+
+      <div style="display: flex; flex-direction: column; margin-bottom: 15rem">
+        <label style="color: #f2f2ff" for="status"> Task status </label>
+
+        <select name="status" id="status">
+          <option value="To Do">To do</option>
+          <option value="In Progress">In progress</option>
+          <option value="Testing">Testing</option>
+          <option value="Done">Done</option>
+        </select>
+      </div>
+    </div>
+
+    <div
+      style="width: 100%; height: auto; display: flex; justify-content: center"
+    >
+      <table style="width: 80%; background-color: rgb(199, 199, 199)">
+        <tr style="border: 1px solid rgb(84, 84, 84)">
+          <th style="border: 1px solid rgb(84, 84, 84)">To do</th>
+          <th style="border: 1px solid rgb(84, 84, 84)">In progress</th>
+          <th style="border: 1px solid rgb(84, 84, 84)">Testing</th>
+          <th style="border: 1px solid rgb(84, 84, 84)">Done</th>
+        </tr>
+        <tr>
+          <td
+            id="toDo"
+            style="
+              padding: 0;
+              width: 25%;
+              height: 5rem;
+              border: 1px solid rgb(84, 84, 84);
+            "
+          ></td>
+          <td
+            id="inProgress"
+            style="
+              padding: 0;
+              width: 25%;
+              height: 5rem;
+              border: 1px solid rgb(84, 84, 84);
+            "
+          ></td>
+          <td
+            id="testing"
+            style="
+              padding: 0;
+              width: 25%;
+              height: 5rem;
+              border: 1px solid rgb(84, 84, 84);
+            "
+          ></td>
+          <td
+            id="Done"
+            style="
+              padding: 0;
+              height: 5rem;
+              width: 25%;
+              border: 1px solid rgb(84, 84, 84);
+            "
+          ></td>
+        </tr>
+      </table>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
